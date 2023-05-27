@@ -1,0 +1,36 @@
+     {
+      "opciones": [
+        {
+          "valor": "OrderByPriceASC",
+          "nombre": "Menor Precio"
+        },
+        {
+          "valor": "OrderByPriceDESC",
+          "nombre": "Mayor Precio"
+        },
+        {
+          "valor": "OrderByTopSaleDESC",
+          "nombre": "Más Vendidos"
+        },
+        {
+          "valor": "OrderByReviewRateDESC",
+          "nombre": "Más valorados"
+        },
+        {
+          "valor": "OrderByNameASC",
+          "nombre": "A - Z"
+        },
+        {
+          "valor": "OrderByNameDESC",
+          "nombre": "Z - A"
+        },
+        {
+          "valor": "OrderByReleaseDateDESC",
+          "nombre": "Fecha de lanzamiento"
+        },
+        {
+          "valor": "OrderByBestDiscountDESC",
+          "nombre": "Mejor descuento"
+        }
+      ]
+    }

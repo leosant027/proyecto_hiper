@@ -6,4 +6,13 @@ por lo tanto deberia de consumir alguna ApiRest.
 La cual es provista por https://vtex.com/ar-es/ y comence a leer la documentación
 de la misma para poder consumirla.
 
-Dado a que tengo la información nesesaria procedo Crear el codigo 
+Dado a que tengo la información nesesaria procedo Crear el codigo. 
+Tendre que crear una achivo
+json con las sucursales copiando la respueta de el action INIT, ya que no consigo encortrar el endPoind de las misma.
+
+## Endpoinds
+### Catogorias 
+Devuelve el arbol de categorias y sub cateogrias  limitando a 50 subniveles
+```
+/api/catalog_system/pub/category/tree/50
+````

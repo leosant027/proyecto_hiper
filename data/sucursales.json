@@ -1,0 +1,124 @@
+{
+  "sucursales":[
+  {
+    "ciudad": "Córdoba",
+    "tiendas": [
+      {
+        "id": 1,
+        "nombre": "Hipermercado Lugones",
+        "cod": 101
+      },
+      {
+        "id": 2,
+        "nombre": "Hipermercado Rivera",
+        "cod": 102
+      },
+      {
+        "id": 3,
+        "nombre": "Hipermercado Jacinto Rios",
+        "cod": 103
+      },
+      {
+        "id": 4,
+        "nombre": "Hipermercado Ruta 9",
+        "cod": 104
+      }
+    ]
+  },
+  {
+    "ciudad": "Mendoza",
+    "tiendas": [
+      {
+        "id": 6,
+        "nombre": "Hipermercado Godoy Cruz",
+        "cod": 106
+      },
+      {
+        "id": 16,
+        "nombre": "Hipermercado Rivera",
+        "cod": 126
+      }
+    ]
+  },
+  {
+    "ciudad": "Tucumán",
+    "tiendas": [
+      {
+        "id": 8,
+        "nombre": "Hipermercado Tucumán 1",
+        "cod": 107
+      },
+      {
+        "id": 9,
+        "nombre": "Hipermercado Tucumán 2",
+        "cod": 108
+      }
+    ]
+  },
+  {
+    "ciudad": "Misiones",
+    "tiendas": [
+      {
+        "id": 7,
+        "nombre": "Hipermercado Posadas",
+        "cod": 109
+      }
+    ]
+  },
+  {
+    "ciudad": "Chaco",
+    "tiendas": [
+      {
+        "id": 10,
+        "nombre": "Hipermercado Chaco",
+        "cod": 110
+      }
+    ]
+  },
+  {
+    "ciudad": "Santa Fé",
+    "tiendas": [
+      {
+        "id": 11,
+        "nombre": "Hipermercado Rosario",
+        "cod": 111
+      },
+      {
+        "id": 15,
+        "nombre": "Hipermercado Rafaela",
+        "cod": 112
+      }
+    ]
+  },
+  {
+    "ciudad": "Santiago del Estero",
+    "tiendas": [
+      {
+        "id": 12,
+        "nombre": "Hipermercado Santiago del Estero",
+        "cod": 113
+      }
+    ]
+  },
+  {
+    "ciudad": "San Juan",
+    "tiendas": [
+      {
+        "id": 13,
+        "nombre": "Hipermercado San Juan",
+        "cod": 114
+      }
+    ]
+  },
+  {
+    "ciudad": "Salta",
+    "tiendas": [
+      {
+        "id": 14,
+        "nombre": "Hipermercado Salta",
+        "cod": 115
+      }
+    ]
+  }
+]
+}
