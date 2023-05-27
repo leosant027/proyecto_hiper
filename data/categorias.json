@@ -1,0 +1,757 @@
+[
+    {
+        "nombre": "Tecnología",
+        "id": 1,
+        "url": "/tecnologia",
+        "subcategorias": [
+            {
+                "id": 33,
+                "nombre": "TV Y VIDEO",
+                "url": "/tecnologia/tv-y-video"
+            },
+            {
+                "id": 37,
+                "nombre": "AUDIO",
+                "url": "/tecnologia/audio"
+            },
+            {
+                "id": 46,
+                "nombre": "INFORMÁTICA",
+                "url": "/tecnologia/informatica"
+            },
+            {
+                "id": 53,
+                "nombre": "CELULARES Y TABLETS",
+                "url": "/tecnologia/celulares-y-tablets"
+            },
+            {
+                "id": 62,
+                "nombre": "VIDEOJUEGOS",
+                "url": "/tecnologia/videojuegos"
+            },
+            {
+                "id": 66,
+                "nombre": "SMARTWATCH",
+                "url": "/tecnologia/smartwatch"
+            }
+        ]
+    },
+    {
+        "nombre": "Bebidas",
+        "id": 10,
+        "url": "/bebidas",
+        "subcategorias": [
+            {
+                "id": 12,
+                "nombre": "APERITIVOS",
+                "url": "/bebidas/aperitivos"
+            },
+            {
+                "id": 15,
+                "nombre": "CERVEZAS",
+                "url": "/bebidas/cervezas"
+            },
+            {
+                "id": 21,
+                "nombre": "GASEOSAS",
+                "url": "/bebidas/gaseosas"
+            },
+            {
+                "id": 28,
+                "nombre": "JUGOS",
+                "url": "/bebidas/jugos"
+            },
+            {
+                "id": 401,
+                "nombre": "Aguas",
+                "url": "/bebidas/aguas"
+            },
+            {
+                "id": 405,
+                "nombre": "Vinos y Espumantes",
+                "url": "/bebidas/vinos-y-espumantes"
+            },
+            {
+                "id": 410,
+                "nombre": "Isotónicas y Energizantes",
+                "url": "/bebidas/isotonicas-y-energizantes"
+            },
+            {
+                "id": 413,
+                "nombre": "Bebidas Blancas y Licores",
+                "url": "/bebidas/bebidas-blancas-y-licores"
+            }
+        ]
+    },
+    {
+        "nombre": "Deportes",
+        "id": 9,
+        "url": "/deportes",
+        "subcategorias": [
+            {
+                "id": 262,
+                "nombre": "FITNESS",
+                "url": "/deportes/fitness"
+            },
+            {
+                "id": 263,
+                "nombre": "BICICLETAS",
+                "url": "/deportes/bicicletas"
+            },
+            {
+                "id": 264,
+                "nombre": "ACCESORIOS DEPORTIVOS",
+                "url": "/deportes/accesorios-deportivos"
+            },
+            {
+                "id": 265,
+                "nombre": "PATINAJE",
+                "url": "/deportes/patinaje"
+            }
+        ]
+    },
+    {
+        "nombre": "Vehículos",
+        "id": 7,
+        "url": "/vehiculos",
+        "subcategorias": [
+            {
+                "id": 242,
+                "nombre": "ACCESORIOS PARA AUTOMÓVILES",
+                "url": "/vehiculos/accesorios-para-automoviles"
+            },
+            {
+                "id": 243,
+                "nombre": "ACCESORIOS PARA MOTOS",
+                "url": "/vehiculos/accesorios-para-motos"
+            },
+            {
+                "id": 244,
+                "nombre": "NEUMÁTICOS",
+                "url": "/vehiculos/neumaticos"
+            }
+        ]
+    },
+    {
+        "nombre": "Librería",
+        "id": 6,
+        "url": "/libreria",
+        "subcategorias": [
+            {
+                "id": 236,
+                "nombre": "LIBRERÍA Y PAPELERÍA",
+                "url": "/libreria/libreria-y-papeleria"
+            }
+        ]
+    },
+    {
+        "nombre": "Aire Libre y Jardín",
+        "id": 4,
+        "url": "/aire-libre-y-jardin",
+        "subcategorias": [
+            {
+                "id": 169,
+                "nombre": "CAMPING",
+                "url": "/aire-libre-y-jardin/camping"
+            },
+            {
+                "id": 175,
+                "nombre": "PILETAS",
+                "url": "/aire-libre-y-jardin/piletas"
+            },
+            {
+                "id": 180,
+                "nombre": "CUIDADO DEL JARDÍN",
+                "url": "/aire-libre-y-jardin/cuidado-del-jardin"
+            },
+            {
+                "id": 185,
+                "nombre": "MUEBLES DE EXTERIOR",
+                "url": "/aire-libre-y-jardin/muebles-de-exterior"
+            },
+            {
+                "id": 190,
+                "nombre": "ASADOR",
+                "url": "/aire-libre-y-jardin/asador"
+            },
+            {
+                "id": 193,
+                "nombre": "ILUMINACIÓN EXTERIOR",
+                "url": "/aire-libre-y-jardin/iluminacion-exterior"
+            }
+        ]
+    },
+    {
+        "nombre": "Hogar",
+        "id": 3,
+        "url": "/hogar",
+        "subcategorias": [
+            {
+                "id": 115,
+                "nombre": "MUEBLES DE INTERIOR",
+                "url": "/hogar/muebles-de-interior"
+            },
+            {
+                "id": 121,
+                "nombre": "COCINA Y COMEDOR",
+                "url": "/hogar/cocina-y-comedor"
+            },
+            {
+                "id": 134,
+                "nombre": "BAÑO",
+                "url": "/hogar/bano"
+            },
+            {
+                "id": 138,
+                "nombre": "ORGANIZACIÓN",
+                "url": "/hogar/organizacion"
+            },
+            {
+                "id": 142,
+                "nombre": "ILUMINACIÓN",
+                "url": "/hogar/iluminacion"
+            },
+            {
+                "id": 146,
+                "nombre": "DORMITORIO",
+                "url": "/hogar/dormitorio"
+            },
+            {
+                "id": 153,
+                "nombre": "HERRAMIENTAS Y MANTENIMIENTO",
+                "url": "/hogar/herramientas-y-mantenimiento"
+            },
+            {
+                "id": 159,
+                "nombre": "DECO",
+                "url": "/hogar/deco"
+            }
+        ]
+    },
+    {
+        "nombre": "Bebés y Niños",
+        "id": 5,
+        "url": "/bebes-y-ninos",
+        "subcategorias": [
+            {
+                "id": 194,
+                "nombre": "HIGIENE Y SALUD",
+                "url": "/bebes-y-ninos/higiene-y-salud"
+            },
+            {
+                "id": 199,
+                "nombre": "LACTANCIA Y ALIMENTACIÓN",
+                "url": "/bebes-y-ninos/lactancia-y-alimentacion"
+            },
+            {
+                "id": 206,
+                "nombre": "SEGURIDAD DEL BEBÉ",
+                "url": "/bebes-y-ninos/seguridad-del-bebe"
+            },
+            {
+                "id": 209,
+                "nombre": "PASEO DEL BEBÉ",
+                "url": "/bebes-y-ninos/paseo-del-bebe"
+            },
+            {
+                "id": 213,
+                "nombre": "VEHÍCULOS INFANTILES",
+                "url": "/bebes-y-ninos/vehiculos-infantiles"
+            },
+            {
+                "id": 216,
+                "nombre": "MUEBLES INFANTILES",
+                "url": "/bebes-y-ninos/muebles-infantiles"
+            },
+            {
+                "id": 220,
+                "nombre": "JUGUETERÍA",
+                "url": "/bebes-y-ninos/jugueteria"
+            },
+            {
+                "id": 224,
+                "nombre": "ACCESORIOS",
+                "url": "/bebes-y-ninos/accesorios"
+            },
+            {
+                "id": 228,
+                "nombre": "PAÑALES Y TOALLITAS HÚMEDAS",
+                "url": "/bebes-y-ninos/panales-y-toallitas-humedas"
+            }
+        ]
+    },
+    {
+        "nombre": "Electrodomésticos",
+        "id": 2,
+        "url": "/electrodomesticos",
+        "subcategorias": [
+            {
+                "id": 67,
+                "nombre": "CLIMATIZACIÓN",
+                "url": "/electrodomesticos/climatizacion"
+            },
+            {
+                "id": 74,
+                "nombre": "PEQUEÑOS ELECTRODOMÉSTICOS",
+                "url": "/electrodomesticos/pequenos-electrodomesticos"
+            },
+            {
+                "id": 84,
+                "nombre": "LAVADO",
+                "url": "/electrodomesticos/lavado"
+            },
+            {
+                "id": 89,
+                "nombre": "COCINAS Y HORNOS",
+                "url": "/electrodomesticos/cocinas-y-hornos"
+            },
+            {
+                "id": 97,
+                "nombre": "HELADERAS Y FREEZERS",
+                "url": "/electrodomesticos/heladeras-y-freezers"
+            },
+            {
+                "id": 102,
+                "nombre": "HOGAR Y LIMPIEZA",
+                "url": "/electrodomesticos/hogar-y-limpieza"
+            },
+            {
+                "id": 105,
+                "nombre": "CUIDADO PERSONAL Y SALUD",
+                "url": "/electrodomesticos/cuidado-personal-y-salud"
+            },
+            {
+                "id": 112,
+                "nombre": "TERMOTANQUES Y CALEFONES",
+                "url": "/electrodomesticos/termotanques-y-calefones"
+            }
+        ]
+    },
+    {
+        "nombre": "Mascotas",
+        "id": 11,
+        "url": "/mascotas",
+        "subcategorias": [
+            {
+                "id": 281,
+                "nombre": "ALIMENTOS",
+                "url": "/mascotas/alimentos"
+            },
+            {
+                "id": 285,
+                "nombre": "ACCESORIOS PARA MASCOTAS",
+                "url": "/mascotas/accesorios-para-mascotas"
+            }
+        ]
+    },
+    {
+        "nombre": "Almacén",
+        "id": 302,
+        "url": "/almacen",
+        "subcategorias": [
+            {
+                "id": 306,
+                "nombre": "Aceites y Vinagres",
+                "url": "/almacen/aceites-y-vinagres"
+            },
+            {
+                "id": 315,
+                "nombre": "Aceitunas y Encurtidos",
+                "url": "/almacen/aceitunas-y-encurtidos"
+            },
+            {
+                "id": 319,
+                "nombre": "Aderezos",
+                "url": "/almacen/aderezos"
+            },
+            {
+                "id": 325,
+                "nombre": "Arroz y Legumbres",
+                "url": "/almacen/arroz-y-legumbres"
+            },
+            {
+                "id": 326,
+                "nombre": "Caldos, Sopas y Puré",
+                "url": "/almacen/caldos-sopas-y-pure"
+            },
+            {
+                "id": 330,
+                "nombre": "Conservas",
+                "url": "/almacen/conservas"
+            },
+            {
+                "id": 336,
+                "nombre": "Desayuno y Merienda",
+                "url": "/almacen/desayuno-y-merienda"
+            },
+            {
+                "id": 348,
+                "nombre": "Golosinas y Chocolates",
+                "url": "/almacen/golosinas-y-chocolates"
+            },
+            {
+                "id": 356,
+                "nombre": "Harinas",
+                "url": "/almacen/harinas"
+            },
+            {
+                "id": 361,
+                "nombre": "Sin Tacc",
+                "url": "/almacen/sin-tacc"
+            },
+            {
+                "id": 362,
+                "nombre": "Panificados",
+                "url": "/almacen/panificados"
+            },
+            {
+                "id": 367,
+                "nombre": "Para preparar",
+                "url": "/almacen/para-preparar"
+            },
+            {
+                "id": 373,
+                "nombre": "Pastas Secas y Salsas",
+                "url": "/almacen/pastas-secas-y-salsas"
+            },
+            {
+                "id": 381,
+                "nombre": "Sal, Pimienta y Especias",
+                "url": "/almacen/sal-pimienta-y-especias"
+            },
+            {
+                "id": 385,
+                "nombre": "Snacks",
+                "url": "/almacen/snacks"
+            }
+        ]
+    },
+    {
+        "nombre": "Lácteos",
+        "id": 303,
+        "url": "/lacteos",
+        "subcategorias": [
+            {
+                "id": 395,
+                "nombre": "Dulce de Leche",
+                "url": "/lacteos/dulce-de-leche"
+            },
+            {
+                "id": 398,
+                "nombre": "Leches",
+                "url": "/lacteos/leches"
+            },
+            {
+                "id": 525,
+                "nombre": "Cremas",
+                "url": "/lacteos/cremas"
+            },
+            {
+                "id": 532,
+                "nombre": "Yogures",
+                "url": "/lacteos/yogures"
+            },
+            {
+                "id": 536,
+                "nombre": "Mantecas y Margarinas",
+                "url": "/lacteos/mantecas-y-margarinas"
+            },
+            {
+                "id": 542,
+                "nombre": "POSTRES Y FLANES",
+                "url": "/lacteos/postres-y-flanes"
+            }
+        ]
+    },
+    {
+        "nombre": "Perfumería",
+        "id": 417,
+        "url": "/perfumeria",
+        "subcategorias": [
+            {
+                "id": 418,
+                "nombre": "Cuidado Capilar",
+                "url": "/perfumeria/cuidado-capilar"
+            },
+            {
+                "id": 424,
+                "nombre": "Cuidado Oral",
+                "url": "/perfumeria/cuidado-oral"
+            },
+            {
+                "id": 429,
+                "nombre": "Cuidado Personal",
+                "url": "/perfumeria/cuidado-personal"
+            },
+            {
+                "id": 439,
+                "nombre": "Cuidado de la Piel",
+                "url": "/perfumeria/cuidado-de-la-piel"
+            },
+            {
+                "id": 444,
+                "nombre": "Protección Femenina",
+                "url": "/perfumeria/proteccion-femenina"
+            },
+            {
+                "id": 449,
+                "nombre": "Protección para Adultos",
+                "url": "/perfumeria/proteccion-para-adultos"
+            },
+            {
+                "id": 452,
+                "nombre": "Farmacia",
+                "url": "/perfumeria/farmacia"
+            }
+        ]
+    },
+    {
+        "nombre": "Limpieza",
+        "id": 457,
+        "url": "/limpieza",
+        "subcategorias": [
+            {
+                "id": 458,
+                "nombre": "Accesorios de Limpieza",
+                "url": "/limpieza/accesorios-de-limpieza"
+            },
+            {
+                "id": 473,
+                "nombre": "Calzado",
+                "url": "/limpieza/calzado"
+            },
+            {
+                "id": 477,
+                "nombre": "Cuidado de la Ropa",
+                "url": "/limpieza/cuidado-de-la-ropa"
+            },
+            {
+                "id": 485,
+                "nombre": "Desodorantes de ambiente",
+                "url": "/limpieza/desodorantes-de-ambiente"
+            },
+            {
+                "id": 489,
+                "nombre": "Insecticidas",
+                "url": "/limpieza/insecticidas"
+            },
+            {
+                "id": 495,
+                "nombre": "Lavandina",
+                "url": "/limpieza/lavandina"
+            },
+            {
+                "id": 498,
+                "nombre": "Limpieza de Baño",
+                "url": "/limpieza/limpieza-de-bano"
+            },
+            {
+                "id": 502,
+                "nombre": "Limpieza de Cocina",
+                "url": "/limpieza/limpieza-de-cocina"
+            },
+            {
+                "id": 510,
+                "nombre": "Limpieza de Pisos y Muebles",
+                "url": "/limpieza/limpieza-de-pisos-y-muebles"
+            },
+            {
+                "id": 514,
+                "nombre": "Papeles",
+                "url": "/limpieza/papeles"
+            }
+        ]
+    },
+    {
+        "nombre": "Frutas y Verduras",
+        "id": 554,
+        "url": "/frutas-y-verduras",
+        "subcategorias": [
+            {
+                "id": 555,
+                "nombre": "Frutas",
+                "url": "/frutas-y-verduras/frutas"
+            },
+            {
+                "id": 559,
+                "nombre": "Verduras",
+                "url": "/frutas-y-verduras/verduras"
+            },
+            {
+                "id": 565,
+                "nombre": "Huevos",
+                "url": "/frutas-y-verduras/huevos"
+            },
+            {
+                "id": 566,
+                "nombre": "Legumbres y semillas",
+                "url": "/frutas-y-verduras/legumbres-y-semillas"
+            },
+            {
+                "id": 567,
+                "nombre": "Hierbas aromáticas",
+                "url": "/frutas-y-verduras/hierbas-aromaticas"
+            },
+            {
+                "id": 568,
+                "nombre": "Leña y Carbón",
+                "url": "/frutas-y-verduras/lena-y-carbon"
+            }
+        ]
+    },
+    {
+        "nombre": "Quesos y fiambres",
+        "id": 573,
+        "url": "/quesos-y-fiambres",
+        "subcategorias": [
+            {
+                "id": 574,
+                "nombre": "Quesos",
+                "url": "/quesos-y-fiambres/quesos"
+            },
+            {
+                "id": 580,
+                "nombre": "Fiambres",
+                "url": "/quesos-y-fiambres/fiambres"
+            },
+            {
+                "id": 581,
+                "nombre": "Salchichas",
+                "url": "/quesos-y-fiambres/salchichas"
+            }
+        ]
+    },
+    {
+        "nombre": "Carnes",
+        "id": 587,
+        "url": "/carnes",
+        "subcategorias": [
+            {
+                "id": 588,
+                "nombre": "Carne vacuna",
+                "url": "/carnes/carne-vacuna"
+            },
+            {
+                "id": 589,
+                "nombre": "Carne de cerdo",
+                "url": "/carnes/carne-de-cerdo"
+            },
+            {
+                "id": 590,
+                "nombre": "Carne de Pollo",
+                "url": "/carnes/carne-de-pollo"
+            },
+            {
+                "id": 592,
+                "nombre": "Embutidos",
+                "url": "/carnes/embutidos"
+            },
+            {
+                "id": 593,
+                "nombre": "Pescados",
+                "url": "/carnes/pescados"
+            },
+            {
+                "id": 594,
+                "nombre": "Mariscos",
+                "url": "/carnes/mariscos"
+            }
+        ]
+    },
+    {
+        "nombre": "Pastas frescas y tapas",
+        "id": 538,
+        "url": "/pastas-frescas-y-tapas",
+        "subcategorias": [
+            {
+                "id": 529,
+                "nombre": "LEVADURAS Y GRASAS",
+                "url": "/pastas-frescas-y-tapas/levaduras-y-grasas"
+            },
+            {
+                "id": 539,
+                "nombre": "Fideos y ñoquis",
+                "url": "/pastas-frescas-y-tapas/fideos-y-noquis"
+            },
+            {
+                "id": 540,
+                "nombre": "Pastas Rellenas",
+                "url": "/pastas-frescas-y-tapas/pastas-rellenas"
+            },
+            {
+                "id": 541,
+                "nombre": "Tapas",
+                "url": "/pastas-frescas-y-tapas/tapas"
+            }
+        ]
+    },
+    {
+        "nombre": "Congelados",
+        "id": 619,
+        "url": "/congelados",
+        "subcategorias": [
+            {
+                "id": 620,
+                "nombre": "Frutas congeladas",
+                "url": "/congelados/frutas-congeladas"
+            },
+            {
+                "id": 621,
+                "nombre": "Verduras congeladas",
+                "url": "/congelados/verduras-congeladas"
+            },
+            {
+                "id": 622,
+                "nombre": "Papas congeladas",
+                "url": "/congelados/papas-congeladas"
+            },
+            {
+                "id": 623,
+                "nombre": "Comidas preparadas",
+                "url": "/congelados/comidas-preparadas"
+            },
+            {
+                "id": 624,
+                "nombre": "Prefritos congelados",
+                "url": "/congelados/prefritos-congelados"
+            },
+            {
+                "id": 625,
+                "nombre": "Helados y postres",
+                "url": "/congelados/helados-y-postres"
+            },
+            {
+                "id": 626,
+                "nombre": "Carnes y pollo",
+                "url": "/congelados/carnes-y-pollo"
+            },
+            {
+                "id": 627,
+                "nombre": "Hamburguesas y milanesas",
+                "url": "/congelados/hamburguesas-y-milanesas"
+            }
+        ]
+    },
+    {
+        "nombre": "Taeq",
+        "id": 651,
+        "url": "/taeq",
+        "subcategorias": [
+            {
+                "id": 673,
+                "nombre": "Almacen TAEQ",
+                "url": "/taeq/almacen-taeq"
+            },
+            {
+                "id": 674,
+                "nombre": "Frutas y verduras TAEQ",
+                "url": "/taeq/frutas-y-verduras-taeq"
+            },
+            {
+                "id": 675,
+                "nombre": "Congelados TAEQ",
+                "url": "/taeq/congelados-taeq"
+            }
+        ]
+    }
+]
