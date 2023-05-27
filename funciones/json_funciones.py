@@ -1,5 +1,4 @@
 import json
-
 def seleccionar_opcion(archivo_json, atributo):
     # Abre el archivo json y lee los datos
     with open(archivo_json, 'r') as f:

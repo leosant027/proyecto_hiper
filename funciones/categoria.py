@@ -1,5 +1,5 @@
 from funciones.parses import parse_categoria
-
+import json
 
 
 def listar_categoria(response):
@@ -9,11 +9,24 @@ def listar_categoria(response):
         # Crear objetos Categoria a partir de los datos obtenidos
         for category_data in data:
             categorias.append(parse_categoria(category_data))
-
+        categorias_y_subcategorias = []
         # Imprimir la lista de categorías
         for categoria in categorias:
-            print(f"Nombre: {categoria.name}, ID: {categoria.id}, URL: {categoria.url}")
+            categoria_dict = {
+                "nombre": categoria.name,
+                "id": categoria.id,
+                "url": categoria.url,
+                "subcategorias": []
+            }
             for subcategoria in categoria.children:
-                print(f" ID: {subcategoria.id},{subcategoria.name}, URL: {subcategoria.url}")
+                subcategoria_dict = {
+                    "id": subcategoria.id,
+                    "nombre": subcategoria.name,
+                    "url": subcategoria.url
+                }
+                categoria_dict["subcategorias"].append(subcategoria_dict)
+            categorias_y_subcategorias.append(categoria_dict)
+        with open('data/categorias.json', 'w', encoding='utf-8') as f:
+            json.dump(categorias_y_subcategorias, f, ensure_ascii=False, indent=4)
     else:
         print(f"Error al recuperar datos: {response.status_code}")

@@ -1,4 +1,4 @@
-from funciones.json import seleccionar_opcion
+from funciones.json_funciones import seleccionar_opcion
 from funciones.parses import parse_filtro
 
 

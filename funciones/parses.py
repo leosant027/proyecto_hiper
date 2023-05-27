@@ -10,8 +10,6 @@ def parse_categoria(data):
         has_children=data["hasChildren"],
         url=data["url"].replace("https://www.hiperlibertad.com.ar", ""),
         children=[],
-        title=data["Title"],
-        meta_tag_description=data["MetaTagDescription"]
     )
 
     # Si la categoría tiene hijos, recorrerlos recursivamente
