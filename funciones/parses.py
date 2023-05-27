@@ -1,4 +1,4 @@
-from modelos.catgoria import Categoria
+from modelos.categoria import Categoria
 from modelos.filtro import Filtro
 from modelos.sucursal import Sucursal
 
@@ -8,7 +8,7 @@ def parse_categoria(data):
         id=data["id"],
         name=data["name"],
         has_children=data["hasChildren"],
-        url=data["url"],
+        url=data["url"].replace("https://www.hiperlibertad.com.ar", ""),
         children=[],
         title=data["Title"],
         meta_tag_description=data["MetaTagDescription"]

@@ -12,8 +12,8 @@ def listar_categoria(response):
 
         # Imprimir la lista de categorías
         for categoria in categorias:
-            print(f"Nombre: {categoria.name}, ID: {categoria.id},")
+            print(f"Nombre: {categoria.name}, ID: {categoria.id}, URL: {categoria.url}")
             for subcategoria in categoria.children:
-                print(f" {subcategoria.name}, ID: {subcategoria.id},")
+                print(f" ID: {subcategoria.id},{subcategoria.name}, URL: {subcategoria.url}")
     else:
         print(f"Error al recuperar datos: {response.status_code}")
