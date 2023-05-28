@@ -1,5 +1,4 @@
-{
-  "sucursales":[
+[
   {
     "ciudad": "Córdoba",
     "tiendas": [
@@ -121,4 +120,3 @@
     ]
   }
 ]
-}
