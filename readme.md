@@ -15,4 +15,14 @@ json con las sucursales copiando la respueta de el action INIT, ya que no consig
 Devuelve el arbol de categorias y sub cateogrias  limitando a 50 subniveles
 ```
 /api/catalog_system/pub/category/tree/50
-````
+```
+Mapeo de valores de categorias
+Se va agregando una una "c" al map por niviel de categoria que se desea mapear
+Categoria Generarl
+```
+/api/catalog_system/pub/facets/search/tecnologia/?map=c
+```
+Subcategoria
+```
+/api/catalog_system/pub/facets/search/tecnologia/tv-y-video/?map=c,c
+```
