@@ -18,13 +18,17 @@ def parse_categoria(data):
             categoria.children.append(parse_categoria(child))
 
     return categoria
+
+
 def parse_sucursal(data):
     sucursal = Sucursal(
         id=data["id"],
-        ciudad=data["ciudad"],
+        ciudad=data["nombre"],
         cod=data["cod"],
     )
     return sucursal
+
+
 def parse_filtro(data):
     filtro = Filtro(
         valor=data["valor"],
