@@ -1,4 +1,4 @@
-from costante_gral import URL_BASE
+from costante_gral import URL_BASE, MAX_PRODUCTOS_POR_PAGINA
 from funciones.api import consumir_api
 from funciones.parses import parse_categoria
 import json
@@ -33,14 +33,26 @@ def listar_categoria(headers):
             "url": categoria.url,
             "cantidad_productos": 0,
             "subcategorias": [],
-            "marcas": []
+            "marcas": [],
+            "paginas":[]
         }
 
         urlinfo = f"{URL_BASE}/api/catalog_system/pub/facets/search{categoria.url}/?map=c"
         data_info = consumir_api(urlinfo, headers)
 
         # Agregar cantidad de productos y marcas
-        categoria_dict["cantidad_productos"] = data_info['CategoriesTrees'][0]['Quantity']
+        cantidad_productos=data_info['CategoriesTrees'][0]['Quantity']
+        categoria_dict["cantidad_productos"] =cantidad_productos
+        # Creando paginacion
+        total_paginas = (cantidad_productos - 1) // MAX_PRODUCTOS_POR_PAGINA  + 1
+        for pagina in range(total_paginas):
+            inicio = pagina * MAX_PRODUCTOS_POR_PAGINA
+            fin = inicio + MAX_PRODUCTOS_POR_PAGINA
+            pagina_dict={
+                "pagina":pagina+1,
+                "url":f"_from={inicio}&_to={fin}"
+            }
+            categoria_dict["paginas"].append(pagina_dict)
         for marca in data_info['Brands']:
             marca_dict = {
                 "id": 0,
