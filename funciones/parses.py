@@ -47,7 +47,8 @@ def parse_produco(data):
         precio_lista=data["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"],
         url=data["link"],
         stock=data["items"][0]["sellers"][0]["commertialOffer"]["AvailableQuantity"],
-        sku=data["items"][0]["ean"]
+        sku =data["items"][0]["ean"],
+        codigo_barra=data["items"][0]["ean"]
     )
     return producto
 
