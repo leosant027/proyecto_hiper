@@ -1,5 +1,6 @@
 from modelos.categoria import Categoria
 from modelos.filtro import Filtro
+from modelos.producto import Producto
 from modelos.sucursal import Sucursal
 
 
@@ -35,3 +36,18 @@ def parse_filtro(data):
         nombre=data["nombre"],
     )
     return filtro
+
+def parse_produco(data):
+    producto = Producto(
+        nombre=data["productName"],
+        marca=data["brand"],
+        marca_id=data["brandId"],
+        categoria=data["categoryId"],
+        precio=data["items"][0]["sellers"][0]["commertialOffer"]["Price"],
+        precio_lista=data["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"],
+        url=data["link"],
+        stock=data["items"][0]["sellers"][0]["commertialOffer"]["AvailableQuantity"],
+        sku=data["items"][0]["ean"]
+    )
+    return producto
+
