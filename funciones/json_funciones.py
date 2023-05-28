@@ -1,23 +1,42 @@
 import json
-def seleccionar_opcion(archivo_json, atributo):
-    # Abre el archivo json y lee los datos
-    with open(archivo_json, 'r') as f:
-        data = json.load(f)
 
-    # Extrae las opciones del archivo json
-    options = data[atributo]
+
+def crear_menu(data, atributo=None, key_menu="nombre"):
+    """
+    Esta función presenta una lista de opciones al usuario y le permite seleccionar una.
+
+    Parámetros:
+    data (str/dict): El camino al archivo JSON que contiene las opciones o un diccionario de Python.
+    atributo (str, opcional): El atributo en el JSON que contiene las opciones. Si no se proporciona o si el atributo no existe, se utilizan todos los datos en el archivo JSON.
+    key_menu (str, opcional): La clave que se debe utilizar para mostrar las opciones al usuario. Por defecto es "nombre".
+
+    Retorna:
+    dict: La opción seleccionada por el usuario. Si el usuario selecciona una opción inválida, la función retorna None.
+    """
+    # Si data es una cadena, se supone que es una ruta a un archivo y se intenta cargar
+    if isinstance(data, str):
+        with open(data, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+    # Intenta extraer las opciones del archivo json
+    if atributo==None:
+        options = data
+    else:
+        options = data[atributo]
+
+
 
     # Imprime las opciones y solicita al usuario que elija una
     for i, option in enumerate(options, 1):
-        print(f"{i}. {option['nombre']}")
+        print(f"{i}. {option[key_menu]}")
 
     choice = int(input("Elige una opción (introduce el número correspondiente): "))
 
     # Asegúrate de que la opción elegida sea válida
     if 1 <= choice <= len(options):
         chosen_option = options[choice - 1]
-        print(chosen_option)
         return chosen_option
     else:
         print("Elección inválida, intenta de nuevo.")
         return None
+
