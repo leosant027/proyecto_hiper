@@ -37,8 +37,8 @@ def parse_categoria(data):
 
 def parse_sucursal(data):
     sucursal = Sucursal(
-        id=data["id"],
-        ciudad=data["nombre"],
+        sucursal_id=data["id"],
+        nombre=data["nombre"],
         cod=data["cod"],
     )
     return sucursal
@@ -58,12 +58,13 @@ def parse_produco(data):
         nombre=data["productName"],
         marca=data["brand"],
         marca_id=data["brandId"],
-        categoria=data["categoryId"],
+        categoria="",
+        categoria_id=data["categoryId"],
         precio=data["items"][0]["sellers"][0]["commertialOffer"]["Price"],
         precio_lista=data["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"],
         url=data["link"],
         stock=data["items"][0]["sellers"][0]["commertialOffer"]["AvailableQuantity"],
-        sku=data["items"][0]["ean"],
+        sku_id=data["items"][0]["itemId"],
         codigo_barra=data["items"][0]["ean"]
     )
     return producto

@@ -1,5 +1,5 @@
 class Sucursal:
-    def __init__(self, ciudad, id,cod):
-        self.id = id
-        self.ciudad = ciudad
+    def __init__(self, nombre, sucursal_id,cod):
+        self.sucursal_id = sucursal_id
+        self.nombre = nombre
         self.cod = cod
