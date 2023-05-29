@@ -1,5 +1,6 @@
 from costante_gral import URL_BASE, MAX_PRODUCTOS_POR_PAGINA
 from funciones.api import consumir_api
+from funciones.json_funciones import leer_json, guardar_json
 from funciones.parses import parse_categorias
 import json
 from tqdm import tqdm
@@ -79,3 +80,28 @@ def listar_categoria(headers):
     # Guardar los datos parseados en un archivo JSON
     with open('data/categorias.json', 'w', encoding='utf-8') as f:
         json.dump(categorias_y_subcategorias, f, ensure_ascii=False, indent=4)
+
+def mapear_categorias():
+    #Leer archivo
+    data=leer_json('data/categorias.json')
+    # Crear un nuevo JSON
+    nuevo_json = []
+
+    # Procesar cada elemento en el JSON proporcionado
+    for item in data:
+        # Añadir la categoría principal
+        nuevo_json.append({
+            "id": item["categoria_id"],
+            "nombre": item["nombre"]
+        })
+
+        # Añadir cada subcategoría
+        for subcategoria in item.get("subcategorias", []):
+            nuevo_json.append({
+                "id": subcategoria["categoria_id"],
+                "nombre": subcategoria["nombre"]
+            })
+
+    # Ordenar la lista resultante por id
+    nuevo_json = sorted(nuevo_json, key=lambda x: x['id'])
+    guardar_json(nuevo_json,'data/listado_categoria.json')
