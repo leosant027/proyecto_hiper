@@ -24,8 +24,6 @@ def crear_menu(data, atributo=None, key_menu="nombre"):
     else:
         options = data[atributo]
 
-
-
     # Imprime las opciones y solicita al usuario que elija una
     for i, option in enumerate(options, 1):
         print(f"{i}. {option[key_menu]}")
@@ -40,7 +38,13 @@ def crear_menu(data, atributo=None, key_menu="nombre"):
         print("Elección inválida, intenta de nuevo.")
         return None
 
+
 def leer_json(archivo):
     with open(archivo, encoding='utf-8') as file:
         data = json.load(file)
     return data
+
+
+def guardar_json(data, archivo):
+    with open(archivo, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
