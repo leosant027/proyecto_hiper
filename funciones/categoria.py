@@ -1,6 +1,6 @@
 from costante_gral import URL_BASE, MAX_PRODUCTOS_POR_PAGINA
 from funciones.api import consumir_api
-from funciones.parses import parse_categoria
+from funciones.parses import parse_categorias
 import json
 from tqdm import tqdm
 
@@ -21,36 +21,36 @@ def listar_categoria(headers):
 
     # Parsear los datos de las categorías
     for category_data in data:
-        categorias.append(parse_categoria(category_data))
+        categorias.append(parse_categorias(category_data))
 
     categorias_y_subcategorias = []
 
     # Aquí es donde agregamos el indicador de progreso
-    for categoria in tqdm(categorias, desc='Processing categories'):
+    for categoria in tqdm(categorias, desc='Procesando categorias'):
         categoria_dict = {
             "nombre": categoria.name,
-            "id": categoria.id,
+            "categoria_id": categoria.category_id,
             "url": categoria.url,
             "cantidad_productos": 0,
             "subcategorias": [],
             "marcas": [],
-            "paginas":[]
+            "paginas": []
         }
 
         urlinfo = f"{URL_BASE}/api/catalog_system/pub/facets/search{categoria.url}/?map=c"
         data_info = consumir_api(urlinfo, headers)
 
         # Agregar cantidad de productos y marcas
-        cantidad_productos=data_info['CategoriesTrees'][0]['Quantity']
-        categoria_dict["cantidad_productos"] =cantidad_productos
+        cantidad_productos = data_info['CategoriesTrees'][0]['Quantity']
+        categoria_dict["cantidad_productos"] = cantidad_productos
         # Creando paginacion
-        total_paginas = (cantidad_productos - 1) // MAX_PRODUCTOS_POR_PAGINA  + 1
+        total_paginas = (cantidad_productos - 1) // MAX_PRODUCTOS_POR_PAGINA + 1
         for pagina in range(total_paginas):
             inicio = pagina * MAX_PRODUCTOS_POR_PAGINA
             fin = inicio + MAX_PRODUCTOS_POR_PAGINA
-            pagina_dict={
-                "pagina":pagina+1,
-                "url":f"_from={inicio}&_to={fin}"
+            pagina_dict = {
+                "pagina": pagina + 1,
+                "url": f"_from={inicio}&_to={fin}"
             }
             categoria_dict["paginas"].append(pagina_dict)
         for marca in data_info['Brands']:
@@ -63,7 +63,7 @@ def listar_categoria(headers):
         # Agregar subcategorias y sus datos
         for subcategoria in categoria.children:
             subcategoria_dict = {
-                "id": subcategoria.id,
+                "categoria_id": subcategoria.category_id,
                 "nombre": subcategoria.name,
                 "url": subcategoria.url,
                 "cantidad_productos": 0,
