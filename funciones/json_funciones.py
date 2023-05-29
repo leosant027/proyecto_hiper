@@ -19,7 +19,7 @@ def crear_menu(data, atributo=None, key_menu="nombre"):
             data = json.load(f)
 
     # Intenta extraer las opciones del archivo json
-    if atributo==None:
+    if atributo is None:
         options = data
     else:
         options = data[atributo]
@@ -40,3 +40,7 @@ def crear_menu(data, atributo=None, key_menu="nombre"):
         print("Elección inválida, intenta de nuevo.")
         return None
 
+def leer_json(archivo):
+    with open(archivo, encoding='utf-8') as file:
+        data = json.load(file)
+    return data
