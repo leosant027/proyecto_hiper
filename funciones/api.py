@@ -2,8 +2,10 @@ import time
 
 import requests
 
+from costante_gral import MAX_REINTENTOS
 
-def consumir_api(url, headers, max_reintentos=2):
+
+def consumir_api(url, headers):
     """
     Esta función envía una solicitud GET a una URL y devuelve la respuesta en formato JSON.
 
@@ -18,6 +20,7 @@ def consumir_api(url, headers, max_reintentos=2):
     Lanza:
     SystemExit: Si la solicitud falla después de max_reintentos, se lanza una excepción de tipo SystemExit.
     """
+    max_reintentos = MAX_REINTENTOS
     for i in range(max_reintentos):
         try:
             response = requests.get(url, headers=headers)
