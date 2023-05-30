@@ -53,3 +53,9 @@ def obtener_atributos_validos(objeto):
     """
     return [atributo for atributo in dir(objeto) if
             not callable(getattr(objeto, atributo)) and not atributo.startswith("__")]
+
+
+def leer_csv(archivo):
+    with open(archivo, 'r') as f:
+        reader = csv.DictReader(f)
+        return list(reader), reader.fieldnames
