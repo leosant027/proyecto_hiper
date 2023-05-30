@@ -1,4 +1,4 @@
-from costante_gral import URL_BASE, MAX_PRODUCTOS_POR_PAGINA
+from costante_gral import URL_BASE, MAX_PRODUCTOS_POR_PAGINA, RUTA_DATOS
 from funciones.api import consumir_api
 from funciones.json_funciones import leer_json, guardar_json
 from funciones.parses import parse_categorias
@@ -81,9 +81,10 @@ def listar_categoria(headers):
     with open('data/categorias.json', 'w', encoding='utf-8') as f:
         json.dump(categorias_y_subcategorias, f, ensure_ascii=False, indent=4)
 
+
 def mapear_categorias():
-    #Leer archivo
-    data=leer_json('data/categorias.json')
+    # Leer archivo
+    data = leer_json(f'{RUTA_DATOS}categorias.json')
     # Crear un nuevo JSON
     nuevo_json = []
 
@@ -104,4 +105,4 @@ def mapear_categorias():
 
     # Ordenar la lista resultante por id
     nuevo_json = sorted(nuevo_json, key=lambda x: x['id'])
-    guardar_json(nuevo_json,'data/listado_categoria.json')
+    guardar_json(nuevo_json, f'{RUTA_DATOS}lista_categoria.json')
