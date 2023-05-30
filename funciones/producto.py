@@ -24,17 +24,6 @@ def crear_lista_url_productos():
 
 def descargar_productos(sucursal, headers):
     enlaces = leer_json(f'{RUTA_DATOS}urls_productos.json')
-    categorias = leer_json(f'{RUTA_DATOS}lista_categoria.json')
-    productos_dic = []
-    marcas = []
-
-    # Configurar la barra de progreso
-    total_productos = sum([len(productos) for productos in enlaces])
-    progress_bar = tqdm(total=total_productos, desc="Descargando y ordenando productos", unit="producto")
-
-def descargar_productos(sucursal, headers):
-    enlaces = leer_json(f'{RUTA_DATOS}urls_productos.json')
-    categorias = leer_json(f'{RUTA_DATOS}lista_categoria.json')
     productos_dic = []
     marcas = []
 
@@ -67,4 +56,3 @@ def descargar_productos(sucursal, headers):
     guardar_json(marcas, f'{RUTA_DATOS}lista_marcas.json')
     for elemento in productos_dic:
         guardar_csv(elemento, f'{RUTA_INFORMES}{sucursal.nombre}.csv')
-

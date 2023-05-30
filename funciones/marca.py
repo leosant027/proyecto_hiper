@@ -21,6 +21,7 @@ def mapear_marcas():
     nuevo_json = sorted(nuevo_json, key=lambda x: x['id'])
     guardar_json(nuevo_json, f'{RUTA_DATOS}listado_marca.json')
 
+
 def actualizar_marcas():
     # Archivo JSON original
     archivo_original = f'{RUTA_DATOS}categorias.json'
@@ -40,4 +41,3 @@ def actualizar_marcas():
     # Guardar el JSON actualizado en un archivo
     archivo_actualizado = f'{RUTA_DATOS}categorias_completa.json'
     guardar_json(json_data, archivo_actualizado)
-

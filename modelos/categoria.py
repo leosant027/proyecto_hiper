@@ -1,6 +1,7 @@
 class Categoria:
-    def __init__(self, categoria_id, nombre, url, cantidad_productos, subcategorias, marcas, paginas):
+    def __init__(self, categoria_id,tiene_subcategoria, nombre, url, cantidad_productos, subcategorias, marcas, paginas):
         self.id = categoria_id
+        self.tiene_subcategoria = tiene_subcategoria
         self.nombre = nombre
         self.url = url
         self.cantidad_productos = cantidad_productos

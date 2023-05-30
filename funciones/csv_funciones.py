@@ -55,7 +55,21 @@ def obtener_atributos_validos(objeto):
             not callable(getattr(objeto, atributo)) and not atributo.startswith("__")]
 
 
-def leer_csv(archivo):
-    with open(archivo, 'r') as f:
-        reader = csv.DictReader(f)
-        return list(reader), reader.fieldnames
+def leer_csv(archivo_csv):
+    with open(archivo_csv, newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=';')
+        filas = list(reader)
+        nombres_campos = reader.fieldnames
+    return filas, nombres_campos
+
+def obtener_valor(diccionario, clave_buscada=None):
+    if clave_buscada:
+        return diccionario.get(clave_buscada)
+    else:
+        return diccionario
+def actualizar_valores(archivo_csv, filas):
+    with open(archivo_csv, 'w', newline='', encoding='utf-8') as file:
+        fieldnames = filas[0].keys()
+        writer = csv.DictWriter(file, delimiter=';', fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(filas)

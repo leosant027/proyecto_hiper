@@ -5,7 +5,7 @@ from modelos.producto import Producto
 from modelos.sucursal import Sucursal
 
 
-def parse_categorias(data):
+def parse_categoria_temp(data):
     categoria = CategoriaTemp(
         category_id=data["id"],
         name=data["name"],
@@ -17,7 +17,7 @@ def parse_categorias(data):
     # Si la categoría tiene hijos, recorrerlos recursivamente
     if "children" in data:
         for child in data["children"]:
-            categoria.children.append(parse_categorias(child))
+            categoria.children.append(parse_categoria_temp(child))
 
     return categoria
 
@@ -68,3 +68,4 @@ def parse_produco(data):
         codigo_barra=data["items"][0]["ean"]
     )
     return producto
+
