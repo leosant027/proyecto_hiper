@@ -17,8 +17,12 @@ minimo de librerias posibles
 ## Librerias
 
 1- tqdm -> Para realizar los progresBar
-2- requests -> Para realizar peticones a 
 
+2- requests -> Para realizar peticones a la api
+````bash
+  pip install tqdm
+  pip install requests
+````
 
 ## Endpoinds
 ### Catogorias 
