@@ -62,7 +62,6 @@ def listar_categoria(headers):
         json.dump(categorias_y_subcategorias, f, default=convertir_a_dict, ensure_ascii=False, indent=4)
 
 
-
 def convertir_a_dict(objeto):
     if isinstance(objeto, CategoriaTemp):
         return objeto.__dict__
