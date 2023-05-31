@@ -2,27 +2,15 @@ from costante_gral import RUTA_DATOS
 from funciones.json_funciones import leer_json, guardar_json
 
 
-def mapear_marcas():
-    # Leer archivo
-    archivo = leer_json(f'{RUTA_DATOS}categorias.json')
-    # Crear un nuevo JSON
-    nuevo_json = []
-
-    # Procesar cada elemento en el JSON proporcionado
-    for item in archivo[0]:
-        # Añadir cada marca
-        for marca in item.get("marcas", []):
-            nuevo_json.append({
-                "id": marca["id"],
-                "nombre": marca["nombre"]
-            })
-
-    # Ordenar la lista resultante por id
-    nuevo_json = sorted(nuevo_json, key=lambda x: x['id'])
-    guardar_json(nuevo_json, f'{RUTA_DATOS}listado_marca.json')
-
-
 def actualizar_marcas():
+    """
+    Esta función actualiza las marcas en un archivo JSON de categorías reemplazando los valores de "id" con los valores
+    correspondientes del archivo 'lista_marcas.json'.
+
+    No hay parámetros de entrada.
+
+    No retorna ningún valor.
+    """
     # Archivo JSON original
     archivo_original = f'{RUTA_DATOS}categorias.json'
 
