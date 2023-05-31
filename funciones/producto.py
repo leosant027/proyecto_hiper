@@ -11,7 +11,7 @@ from funciones.parses import parse_categoria, parse_produco
 def crear_lista_url_productos():
     data = leer_json(f'{RUTA_DATOS}categorias.json')
     productos_urls = []
-    for categoria in data:
+    for categoria in data[0]:
         categoria_seleccionada = parse_categoria(categoria)
         for pagina in categoria_seleccionada.paginas:
             url_productos = URL_BASE + RUTA_BUSQUEDA + categoria_seleccionada.url + '?' + pagina['url']
@@ -55,4 +55,4 @@ def descargar_productos(sucursal, headers):
     productos_dic = sorted(productos_dic, key=lambda x: x.categoria_id)
     guardar_json(marcas, f'{RUTA_DATOS}lista_marcas.json')
     for elemento in productos_dic:
-        guardar_csv(elemento, f'{RUTA_INFORMES}{sucursal.nombre}.csv')
+        guardar_csv(elemento, f'{RUTA_INFORMES}{sucursal.nombre.replace(" ", "-")}.csv')

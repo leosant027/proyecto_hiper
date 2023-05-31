@@ -9,7 +9,7 @@ def mapear_marcas():
     nuevo_json = []
 
     # Procesar cada elemento en el JSON proporcionado
-    for item in archivo:
+    for item in archivo[0]:
         # Añadir cada marca
         for marca in item.get("marcas", []):
             nuevo_json.append({
@@ -34,7 +34,7 @@ def actualizar_marcas():
     json_reemplazo = leer_json(archivo_reemplazo)
 
     # Reemplazar los valores de "id" en el JSON original
-    for item in json_data[0]["marcas"]:
+    for item in json_data[0][0]["marcas"]:
         if item["id"] == 0:
             item["id"] = next((marca["id"] for marca in json_reemplazo if marca["nombre"] == item["nombre"]), 0)
 

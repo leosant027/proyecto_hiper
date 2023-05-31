@@ -24,11 +24,12 @@ def parse_categoria_temp(data):
 
 def parse_categoria(data):
     categoria = Categoria(
-        categoria_id=data["categoria_id"],
-        nombre=data["nombre"],
+        categoria_id=data["category_id"],
+        tiene_subcategoria=data["has_children"],
+        nombre=data["name"],
         url=data["url"],
         cantidad_productos=data["cantidad_productos"],
-        subcategorias=["subcategorias"],
+        subcategorias=["children"],
         marcas=data["marcas"],
         paginas=data["paginas"]
     )
