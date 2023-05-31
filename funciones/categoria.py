@@ -27,7 +27,8 @@ def listar_categoria(headers):
     # Parsear los datos de las categorías
     for category_data in data:
         categorias.append(parse_categoria_temp(category_data))
-    for categoria in categorias:
+
+    for categoria in tqdm(categorias, desc="Progreso", unit="categoría"):
         urlinfo = f"{URL_BASE}/api/catalog_system/pub/facets/search{categoria.url}/?map=c"
         data_info = consumir_api(urlinfo, headers)
         paginas = []
@@ -46,25 +47,20 @@ def listar_categoria(headers):
             marca_dict = dict(id=0, nombre=marca['Name'])
             marcas.append(marca_dict)
             categoria.marcas = marcas
-        print("categoria " + categoria.name)
-        print(f"cant productos {cantidad_productos}")
-        print(categoria.paginas)
         for subcategoria in categoria.children:
             urlinfosubcat = f"{URL_BASE}/api/catalog_system/pub/facets/search{subcategoria.url}/?map=c,c"
             data_infosubcat = consumir_api(urlinfosubcat, headers)
             subcategoria.cantidad_productos = data_infosubcat['CategoriesTrees'][0]['Quantity']
-            print("sub categoria " + subcategoria.name)
-            print(subcategoria.cantidad_productos)
             for subcategoria_2 in subcategoria.children:
                 urlinfosubcat_2 = f"{URL_BASE}/api/catalog_system/pub/facets/search{subcategoria.url}/?map=c,c"
                 data_infosubcat_2 = consumir_api(urlinfosubcat_2, headers)
                 subcategoria_2.cantidad_productos = data_infosubcat_2['CategoriesTrees'][0]['Quantity']
-                print("sub categoria 2 " + subcategoria_2.name)
     categorias_y_subcategorias.append(categorias)
 
     # Guardar los datos parseados en un archivo JSON
     with open('data/categorias.json', 'w', encoding='utf-8') as f:
         json.dump(categorias_y_subcategorias, f, default=convertir_a_dict, ensure_ascii=False, indent=4)
+
 
 
 def convertir_a_dict(objeto):
@@ -116,21 +112,16 @@ def mapear_categorias():
 
 def actualizar_categorias(archivo_csv):
     categorias = leer_json(f'{RUTA_DATOS}lista_categoria.json')
-    # print(categorias)
     filas, nombres_campos = leer_csv(archivo_csv)
-    # filas = filas[1:]
     filas_actualizadas = []
 
     for fila in filas:
-        # print(fila)
-        # print(nombres_campos)
         categoria_id = int(obtener_valor(fila, 'categoria_id'))
         for categoria in categorias:
             if categoria_id == int(categoria['id']):
                 fila['categoria'] = categoria['nombre']
                 filas_actualizadas.append(fila)
                 break
-    print(filas_actualizadas[1])
     actualizar_valores(archivo_csv, filas_actualizadas)
 
     return filas_actualizadas
