@@ -69,4 +69,3 @@ def parse_produco(data):
         codigo_barra=data["items"][0]["ean"]
     )
     return producto
-

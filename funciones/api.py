@@ -1,25 +1,25 @@
 import time
-
 import requests
 
 from costante_gral import MAX_REINTENTOS
 
 
-def consumir_api(url, headers, proxy=None):
+def consumir_api(url: str, headers: dict, proxy: str = None) -> dict:
     """
     Esta función envía una solicitud GET a una URL y devuelve la respuesta en formato JSON.
 
     Parámetros:
-    url (str): La URL a la que se enviará la solicitud GET.
-    headers (dict): Un diccionario que contiene los encabezados HTTP de la solicitud.
-    proxy (str, opcional): La dirección del proxy a utilizar. Por defecto es None.
+    - url (str): La URL a la que se enviará la solicitud GET.
+    - headers (dict): Un diccionario que contiene los encabezados HTTP de la solicitud.
+    - proxy (str, opcional): La dirección del proxy a utilizar. Por defecto es None.
 
     Retorna:
-    dict: La respuesta de la solicitud en formato JSON.
+    - dict: La respuesta de la solicitud en formato JSON.
 
     Lanza:
-    SystemExit: Si la solicitud falla después de max_reintentos, se lanza una excepción de tipo SystemExit.
+    - SystemExit: Si la solicitud falla después de max_reintentos, se lanza una excepción de tipo SystemExit.
     """
+
     max_reintentos = MAX_REINTENTOS
     for i in range(max_reintentos):
         try:

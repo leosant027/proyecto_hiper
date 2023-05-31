@@ -40,7 +40,8 @@ def descargar_productos(sucursal, headers):
     with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = []
         for enlace in enlaces:
-            future = executor.submit(consumir_api, enlace + f'&sc={sucursal.sucursal_id}', headers)
+            enlace_actual = enlace + f'&sc={sucursal.sucursal_id}'
+            future = executor.submit(consumir_api, enlace_actual, headers, proxy=None)
             futures.append(future)
 
         for future in concurrent.futures.as_completed(futures):
