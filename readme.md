@@ -29,6 +29,7 @@ minimo de librerias posibles
 ## Endpoinds
 ## Sucursales por  Geolocalización
 Musetra Informacion de la sucursal 
+
 longitud:-68.8558589
 latitud:-32.9291023
 ```
