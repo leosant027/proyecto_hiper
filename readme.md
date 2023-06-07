@@ -27,6 +27,13 @@ minimo de librerias posibles
 ````
 
 ## Endpoinds
+## Sucursales por  Geolocalización
+Musetra Informacion de la sucursal 
+longitud:-68.8558589
+latitud:-32.9291023
+```
+/api/checkout/pub/pickup-points?geoCoordinates=longitud;latitud
+```
 ### Catogorias 
 Devuelve el arbol de categorias y sub cateogrias  limitando a 50 subniveles
 ```
@@ -34,7 +41,7 @@ Devuelve el arbol de categorias y sub cateogrias  limitando a 50 subniveles
 ```
 Mapeo de valores de categorias
 Se va agregando una una "c" al map por niviel de categoria que se desea mapear
-Categoria Generarl
+Categoria General
 ```
 /api/catalog_system/pub/facets/search/tecnologia/?map=c
 ```
